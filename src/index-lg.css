@@ -1,0 +1,8 @@
+@media only screen and (min-width: 990px){
+	.main-option {
+		width: 300px;
+		display: inline-block;
+		margin: 10px 50px;
+		border-radius: 10px;
+	} 	
+}
