@@ -1,6 +1,6 @@
 # LiberFly.com.br
 
-This is the LiberFly's new website.
+This is the LiberFly's new website. Live at [novosite.liberfly.com.br](http://novosite.liberfly.com.br)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
