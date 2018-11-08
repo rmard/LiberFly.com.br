@@ -36,6 +36,8 @@ class ClaimForm extends React.Component {
 				break;
 			case 'contact':
 				this.setState({contact: event.target.value});
+				break;
+			default:
 				break;												
 		}
 	}

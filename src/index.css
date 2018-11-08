@@ -195,6 +195,13 @@ input.select-dropdown,
 	color: #1d3646;
 }
 
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;	
+    margin-bottom: 0px;
+}
+
 .result-icons i {
 	margin-top: 20px;
 	font-size: 300%;

@@ -1,0 +1,38 @@
+.plane-animation {
+	margin: 150px 0px;
+}
+
+.plane-animation .icons {
+	transform: scale(2);
+	margin-top: 50px;
+	margin-left: -47px;
+	margin-bottom: 30px;
+	animation-name: coloring;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes coloring {
+	0% { color: #4097d3; }
+	50% { color: #233a7a; }
+	100% { color: #4097d3; }
+}
+
+@keyframes plane {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.plane {
+	transform-origin: 40px;
+	animation-name: plane;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	font-size: 24px;
+}
+
+.globe {
+	font-size: 25px;
+	margin-left: 4px;
+}
