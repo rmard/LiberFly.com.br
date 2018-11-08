@@ -1,0 +1,19 @@
+.sidenav .background {
+	padding: 60px;
+	display: block;
+	height: 150px;
+	background-size: cover;
+	background-image: url(/optimized-ross-parmly-25230-unsplash.jpg)
+}
+
+.sidenav .user-view {
+	padding: 75px;
+}
+
+.sidenav .btn {
+	margin-top: 40px!important;
+}
+
+.sidenav .disabled {
+	color: #999;
+}
