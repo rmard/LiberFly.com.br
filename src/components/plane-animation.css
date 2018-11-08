@@ -1,11 +1,12 @@
 .plane-animation {
-	margin: 150px 0px;
+	padding: 150px 0px;
+	overflow: hidden;
 }
 
 .plane-animation .icons {
 	transform: scale(2);
-	margin-top: 50px;
-	margin-left: -47px;
+	margin-top: 0px;
+	margin-left: -120px;
 	margin-bottom: 30px;
 	animation-name: coloring;
 	animation-duration: 20s;
@@ -24,15 +25,18 @@
 }
 
 .plane {
+	margin-right: 2px;
 	transform-origin: 40px;
 	animation-name: plane;
 	animation-duration: 6s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 .globe {
-	font-size: 25px;
-	margin-left: 4px;
+	position: absolute;
+	margin-top: -6px;
+	font-size: 30px;
+	margin-left: 6px;
 }

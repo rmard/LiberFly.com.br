@@ -19,7 +19,7 @@ class CalculatorResult extends React.Component {
 					<div className='row result-title'>
 						<div className='col s12'>
 							<h4>
-								Calculando sua indenização...
+								Calculando sua <br/>indenização...
 							</h4>
 						</div>
 					</div>	
@@ -88,7 +88,8 @@ class CalculatorResult extends React.Component {
 						</div>
 					</div>	
 			        <div className='row'>	              	
-			          	<div className='col s12'>
+			          	<div className='col s12'
+			          		style={{marginBottom: '75px'}}>
 			              	<ButtonChat />      
 			          	</div>	              	
 			        </div> 	
