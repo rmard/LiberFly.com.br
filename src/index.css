@@ -181,6 +181,11 @@ input.select-dropdown,
 	margin: 2px;
 }
 
+.justify {
+	text-align: justify;
+    text-justify: inter-word;
+}
+
 /* results page */
 
 .title-icon {
@@ -263,4 +268,16 @@ input.select-dropdown,
 
 .form-extension.extended div div {
 	height: 50px;
+}
+
+.about {
+	padding-bottom: 80px;
+}
+
+.about-text {
+	color: white;
+	text-shadow: 0px 0px 1px rgba(0,0,0,0.999);
+	background-size: cover;
+	background-position: center;
+	background-image: url(/site-rawpixel-558597-unsplash.jpg);
 }
