@@ -7,6 +7,9 @@ export default () => (
       	style={{padding: '0px'}}
       	className='btn btn-flat btn-large grey lighten-2 grey-text text-darken-2 waves-effect waves-light btn-chat'>
       	<i className="material-icons left">live_help</i> 
-      	TIRE DÚVIDAS COM UM ATENDENTE
+      	{window.innerWidth > 390 ? 
+      		'TIRE DÚVIDAS COM UM ATENDENTE':
+      		'FALAR COM UM ATENDENTE'
+      	}      	
     </a> 
 );
