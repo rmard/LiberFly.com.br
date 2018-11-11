@@ -52,8 +52,22 @@ code {
 	margin-top: -40px;
 }
 
-.main-options-wrapper {
+.your-rights .title-wrapper {
+	padding: 25px;
+}
 
+.your-rights .title-wrapper h2 {
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 0px;
+	color: #3a61ce;
+}
+
+.your-rights .title-wrapper .material-icons {
+	font-size: 80px;
+	transform: rotate(45deg);
+	margin-left: -40px;
+	margin-top: -15px;
 }
 
 /* main options */
@@ -280,4 +294,47 @@ input.select-dropdown,
 	background-size: cover;
 	background-position: center;
 	background-image: url(/site-rawpixel-558597-unsplash.jpg);
+}
+
+/* your-rights page */
+
+.your-rights.row {
+	margin-bottom: 0px;
+}
+
+.your-rights .background {
+	padding: 0px 0px 400px 0px;
+	z-index: 0;
+	width: 100%;
+	bottom: 0px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url(/site-florian-van-duyn-552731-unsplash.jpg);
+}
+
+.collapsible-body {
+	background-color: white;
+	opacity: 0.75;
+}
+/*
+li:nth-child(2n) .collapsible-header {
+	background-color: #233a7a;
+	color: white;
+}
+
+li:nth-child(2n+1) .collapsible-header {
+	background-color: #216ca0;
+	color: white;
+}*/
+
+.collapsible-header, .collapsible-body {
+	color: #233a7a;
+}
+
+.collapsible-header i {
+	color: #233a7a;
+}
+
+body, html {
+	height: 100%;
 }

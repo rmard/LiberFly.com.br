@@ -32,7 +32,7 @@ class Navbar extends React.Component {
         {//<li><a href="#!">Início</a></li>
         }
         <li><a href="/about">Quem somos</a></li>
-        <li><a href="#!" className='disabled'>Conheça seus direitos</a></li>
+        <li><a href="/your-rights">Conheça seus direitos</a></li>
         <li><a href="#!" className='disabled'>Blog de viagem</a></li>
         <li><a href="#!" className='disabled'>Notícias</a></li>
         <li><a href="#!" className='disabled'>Ajuda</a></li>
