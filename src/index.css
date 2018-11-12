@@ -52,18 +52,21 @@ code {
 	margin-top: -40px;
 }
 
-.your-rights .title-wrapper {
+.your-rights .title-wrapper,
+.faq .title-wrapper {
 	padding: 25px;
 }
 
-.your-rights .title-wrapper h2 {
+.your-rights .title-wrapper h2,
+.faq .title-wrapper h2 {
 	font-size: 100%;
 	font-weight: bold;
 	margin-bottom: 0px;
 	color: #3a61ce;
 }
 
-.your-rights .title-wrapper .material-icons {
+.your-rights .title-wrapper .material-icons,
+.faq .title-wrapper .material-icons {
 	font-size: 80px;
 	transform: rotate(45deg);
 	margin-left: -40px;
@@ -302,7 +305,9 @@ input.select-dropdown,
 	margin-bottom: 0px;
 }
 
-.your-rights .background {
+
+.your-rights .background,
+.faq .background {
 	padding: 0px 0px 400px 0px;
 	z-index: 0;
 	width: 100%;
@@ -311,6 +316,12 @@ input.select-dropdown,
 	background-size: cover;
 	background-image: url(/site-florian-van-duyn-552731-unsplash.jpg);
 }
+
+.faq .collapsible {
+	margin-bottom: 0px;
+}
+
+
 
 .collapsible-body {
 	background-color: white;

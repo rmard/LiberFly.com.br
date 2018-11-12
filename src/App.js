@@ -7,6 +7,7 @@ import CalculatorResult from './CalculatorResult';
 import ClaimForm from './ClaimForm';
 import About from './About';
 import YourRights from './YourRights';
+import Faq from './Faq';
 import './App.css';
 
 class App extends Component {
@@ -16,10 +17,12 @@ class App extends Component {
         <Navbar />
         <Route exact path="/about" component={About} />
         <Route exact path="/your-rights" component={YourRights} />
+        <Route exact path="/faq" component={Faq} />
         <Route exact path="/" component={MainOptions} />
         <Route path="/delayed-flight" component={DelayedFlight} />
         <Route path="/results" component={CalculatorResult} />
         <Route path="/claim" component={ClaimForm} />
+        <Route path="/reclamacao" component={ClaimForm} />
       </div>
     );
   }
