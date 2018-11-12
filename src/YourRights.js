@@ -63,19 +63,48 @@ export default () => {
 	    			</li>
 	    			<li>
 	      					<div className="collapsible-header waves-effect"><i className="material-icons">directions_car</i>Atrasos de passageiros</div>
-	      					<div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+	      					<div className="collapsible-body"><span>
+	      						<p>
+	      							Ocorre quando o passageiro se apresenta no balcão de embarque com menos de 40 (quarenta) minutos para voos domésticos ou 60 (sessenta) minutos para voos internacionais. Neste caso as empresas costumam acionar a lista de espera ou cancelar a passagem do passageiro atrasado para atender outros clientes.
+	      						</p>
+	      						<p className='bold'>
+									Destacamos a obrigação da companhia aérea em cumprir o serviço contratado de forma impecável, tal como contratado. Impedir o passageiro de embarcar porque a aeronave estava lotada constituição clara violação às relações de consumo, ficando o consumidor com o direito a receber indenização como forma de compensá-lo pelo estresse que a ação ou omissão da companhia lhe causou.
+								</p>
+	      					</span></div>
 	    			</li>
 	    			<li>
 	      					<div className="collapsible-header waves-effect"><i className="material-icons">work_off</i>Extravio de bagagem</div>
-	      					<div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+	      					<div className="collapsible-body"><span>
+	      						<p>
+	      							Em caso de bagagem extraviada, o cliente deverá procurar a empresa aérea ainda na sala de desembarque ou em até 15 dias após a data do desembarque, relatando o fato em documento fornecido pela empresa ou em qualquer outro comunicado por escrito.
+									Para fazer a reclamação, é necessário apresentar o comprovante de despacho da bagagem.
+								</p>
+								<p>
+									Se a mala for localizada pela empresa aérea, a bagagem deverá ser devolvida para o passageiro, no endereço fornecido com maior brevidade possivel, sem que reste prejudicado ao passageiro o direito de pleitear a indenização ou reembolso.
+								</p>
+								<p>
+									A bagagem poderá permanecer na condição de extraviada por, no máximo 30 dias (voos nacionais) e 21 dias (voos internacionais). Caso não seja localizada e entregue nesse prazo, a empresa deverá indenizar o passageiro.Atenção: Mesmo após localizada e devolvida, o consumidor tem direito a receber uma indenização da companhia aérea por todo o estresse e abalos de natureza psicológica e patrimonial que a negligencia da companhia aérea tenha causado.
+	      						</p>
+	      					</span></div>
 	    			</li>
 	    			<li>
 	      					<div className="collapsible-header waves-effect"><i className="material-icons">work</i>Bagagem danificada</div>
-	      					<div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+	      					<div className="collapsible-body"><span>
+	      						<p>
+	      							O consumidor deverá procurar a empresa aérea para relatar o fato logo que constatar o problema, preferencialmente ainda na sala de desembarque. Esse comunicado por escrito poderá ser registrado na empresa em até 7 dias após a data de desembarque.
+	      						</p>
+	      					</span></div>
 	    			</li>    
 	    			<li>
 	      					<div className="collapsible-header waves-effect"><i className="material-icons">report_problem</i>Furto de bagagem</div>
-	      					<div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+	      					<div className="collapsible-body"><span>
+	      						<p>
+	      							Em caso de furto o consumidor deverá relatar à companhia aérea por escrito. A empresa é responsável pela bagagem desde o momento em que ela é despachada até o seu recebimento pelo passageiro. Além disso, se possível registre uma ocorrência na Polícia Civil, autoridade competente para averiguar o fato.
+	      						</p>
+	      						<p>
+									<strong>Importante:</strong> em qualquer um dos casos acima, lembre-se de guardar as passagens aéreas e o comprovante de despacho da bagagem. É interessante fazer a reclamação imediatamente no guichê da companhia aérea ou no posto da ANAC dentro do próprio aeroporto. Lembre-se de pegar cópia da reclamação para adiantar o recebimento do reembolso pelos danos sofridos.
+	      						</p>
+	      					</span></div>
 	    			</li>        						    			
 	  			</ul>	
 	  		</div>  
