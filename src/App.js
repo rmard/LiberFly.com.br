@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import DelayedFlight from './DelayedFlight';
+import CancelledFlight from './CancelledFlight';
+import BoardingDenied from './BoardingDenied';
 import MainOptions from './MainOptions';
 import CalculatorResult from './CalculatorResult';
 import ClaimForm from './ClaimForm';
@@ -60,6 +62,8 @@ class App extends Component {
         <Route exact path="/faq" component={Faq} />
         <Route exact path="/" component={MainOptions} />
         <Route path="/delayed-flight" component={DelayedFlight} />
+        <Route path="/cancelled-flight" component={CancelledFlight} />
+        <Route path="/boarding-denied" component={BoardingDenied} />
         <Route path="/results" component={CalculatorResult} />
         <Route path="/claim" component={ClaimForm} />
         <Route path="/reclamacao" component={ClaimForm} />
