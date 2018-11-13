@@ -1,14 +1,13 @@
 import React from 'react'
 import LocationInput from './LocationInput'
 import CalculatorTitle from './CalculatorTitle'
-import IssueRefinerSelect from './components/IssueRefinerSelect'
+import {DebounceInput} from 'react-debounce-input';
 
-class LuggageIssues extends React.Component {
+class AnotherIssues extends React.Component {
   state = {
     locationFrom: '',
     locationTo: '',
-    wasYourLuggageReturned: '',
-    didYouRegister: '',
+    details: ''
   }
   
   componentDidMount = () => {
@@ -27,12 +26,12 @@ class LuggageIssues extends React.Component {
       return (
         <div>
           <CalculatorTitle />
-          <div className='issue-type-selected' style={{backgroundImage: 'url(/site-belinda-fewings-977695-unsplash.jpg)'}}>
+          <div className='issue-type-selected' style={{backgroundImage: 'url(/site-kelvin-balingit-531607-unsplash.jpg)'}}>
             <a href='/' className='back-button'>
               <i className='material-icons'>arrow_back</i>
             </a>
             <p className='issue-type-title'>
-              PROBLEMAS COM A BAGAGEM
+              OUTROS PROBLEMAS
             </p>
             <div className='row'>
               <div className='col s10 offset-s1'>
@@ -46,39 +45,29 @@ class LuggageIssues extends React.Component {
                   onChange={(value)=>this.updateState('locationTo', value)}
                   label='Destino'/>
               </div>
-            </div>   
+            </div>             
             <div className='row'>
               <div className='col s10 offset-s1'>
-                <IssueRefinerSelect
-                  title='Sua bagagem foi devolvida a você?'
-                  handleChange={(event)=>this.updateState('wasYourLuggageReturned', event.target.value)}
-                  options={[
-                      'Não, foi perdida definitivamente',
-                      'Sim, mas com atraso',
-                      'Sim, mas com avaria(s)',
-                    ]}
-                />
+                <p className='form-helper'>Qual foi o problema?</p>
+                <div className="input-field input-white-bg">
+                  <i className="material-icons prefix indigo-text text-darken-2">edit</i>
+                  <DebounceInput
+                    minLength={3}
+                    debounceTimeout={500} 
+                    onChange={(e)=>this.updateState('details', e.target.value)}
+                    value={this.state.details} 
+                    type="text" 
+                    placeholder='Descreva o ocorrido'
+                    className=''/>       
+                </div>              
               </div>
-            </div>  
+            </div>            
             <div className='row'>
               <div className='col s10 offset-s1'>
-                <IssueRefinerSelect
-                  title='Você registrou o problema junto à companhia?'
-                  handleChange={(event)=>this.updateState('didYouRegister', event.target.value)}
-                  options={[
-                      'Sim, e tenho a cópia ou protocolo da reclamação',
-                      'Sim, e tenho os emails trocados',
-                      'Sim, e tenho outro documento',
-                      'Não'
-                    ]}
-                />              
-              </div>
-            </div>           
-            <div className='row'>
-              <div className='col s10 offset-s1'>
+                <br/>
                 <p className='form-info'>
                   <i className='material-icons left'>info</i>
-                    A companhia aérea é responsável pela bagagem durante todo o trajeto
+                    Temos uma equipe de especialistas prontos para avaliar seu caso
                 </p>
               </div>
             </div>  
@@ -99,4 +88,4 @@ class LuggageIssues extends React.Component {
   }
 }
 
-export default LuggageIssues
+export default AnotherIssues

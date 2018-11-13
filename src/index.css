@@ -147,7 +147,7 @@ code {
 
 .location-input,
 .select-wrapper {
-	background-color: rgba(255,255,255,0.89);
+	background-color: rgba(255,255,255,0.89)!important;
 	margin: 2px;
 }
 
