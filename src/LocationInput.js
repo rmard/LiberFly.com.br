@@ -19,7 +19,6 @@ class LocationInput extends React.Component {
 	}
 	selectPrediction = (event) => {
 		this.setState({predictions: []});
-		console.log(event.target.innerHTML);
 		this.setState({
 			predictions: []
 		});
