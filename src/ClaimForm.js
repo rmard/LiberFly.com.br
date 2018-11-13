@@ -117,7 +117,10 @@ class ClaimForm extends React.Component {
         			<strong>Ainda com dúvidas?</strong><br/>
         			Consulte-nos gratuitamente
         		</p>
-            <ButtonChat />       		
+            <ButtonChat />   
+            <p>
+            	ou consulte nossa seção<br/><a href='/faq'>perguntas frequentes</a>    		
+            </p>
         	</div>
        	</div>          	  						
 			</div>
