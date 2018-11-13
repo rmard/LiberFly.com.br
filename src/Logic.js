@@ -11,3 +11,38 @@ export const userHasRight = () => {
 			return false;
 	}
 }
+
+export const getDetailsFormatted = () => {
+	let result = localStorage.issueType;
+	result += '<br/>locationFrom: ' + localStorage.locationFrom + '<br/>locationTo: ' + localStorage.locationTo;
+	switch(localStorage.issueType){
+		case 'Atraso de vôo':
+			result += 
+			    '<br/>delay: ' + localStorage.delay +
+			    '<br/>reason: ' + localStorage.reason +
+			    '<br/>lostAppointment: ' + localStorage.lostAppointment;
+			break;
+		case 'Cancelamento de vôo':
+			result += 
+			    '<br/>whenItWasInformed: ' + localStorage.whenItWasInformed +
+			    '<br/>reimbursementOffered: ' + localStorage.reimbursementOffered;
+			break;
+		case 'Não pude embarcar':
+			result += 
+			    '<br/>whenItWasInformed: ' + localStorage.whenItWasInformed +
+			    '<br/>reimbursementOffered: ' + localStorage.reimbursementOffered;	
+			break;
+		case 'Problemas com bagagem':
+			result += 
+			    '<br/>wasYourLuggageReturned: ' + localStorage.wasYourLuggageReturned +
+			    '<br/>didYouRegister: ' + localStorage.didYouRegister;
+			break;
+		case 'Outros problemas':
+			result += 
+			    '<br/>details: ' + localStorage.details;	
+			break;	
+		default:
+			break;
+	}
+	return result;	
+}

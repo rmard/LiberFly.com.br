@@ -220,6 +220,15 @@ input.select-dropdown,
 	color: #1d3646;
 }
 
+.result-title .s8 {
+	height: 106px;
+}
+
+.result-title .s8.valign-wrapper h4 {
+	margin: 0px;
+	float: none;
+}
+
 .footer {
     position: absolute;
     width: 100%;
@@ -357,4 +366,16 @@ body, html {
 
 .blog-link {
 	margin-bottom: 20px;
+}
+
+/* form-sent */
+
+.form-sent .parallax-container {
+	/*height: 250px;*/
+	height: 40vh;
+}
+
+.form-sent .parallax {
+	/*margin-top: -100px;*/
+	margin-top: -20vh;
 }

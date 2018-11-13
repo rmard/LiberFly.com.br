@@ -5,6 +5,7 @@ class ClaimTextInput extends React.Component {
 	render = () => (
 		<div className='input-field'>
 		    <DebounceInput
+		    	required={this.props.required!==undefined}
 	        	id={this.props.id}
 	          	minLength={3}
 	          	debounceTimeout={500} 
