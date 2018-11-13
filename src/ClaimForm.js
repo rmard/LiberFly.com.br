@@ -1,6 +1,9 @@
 import React from 'react'
 import ButtonChat from './ButtonChat'
 import ClaimTextInput from './ClaimTextInput'
+import { userHasRight } from './Logic'
+
+
 
 class ClaimForm extends React.Component {
 	state = {
@@ -42,12 +45,36 @@ class ClaimForm extends React.Component {
 		}
 	}
 	render = () => {
+		let middleForm = (localStorage.issueType && !userHasRight());
 		return (
 			<div className='claim-form'>
+			    {middleForm && (
+					<div className='row'>
+						<div className='col s10 offset-s1'>
+							<p className='font150 bold'>
+								Só mais um detalhe...
+							</p>
+							<p className='justify'>
+								Para prosseguir com o cálculo, informe abaixo os seus dados de contato.
+							</p>
+							{ /*
+								<p className='font150 bold'>
+									Seu caso será avaliado por um de nossos especialistas!
+								</p>
+								<p className='justify'>
+									Complete o formulário abaixo para que possamos entrar em contato com mais detalhes:
+								</p>
+								*/
+							}
+						</div>
+					</div>
+				)}
 				<div className='row blue-section'>
 					<div className='col s12'>
 						<p className='font150'>
-							FORMULÁRIO DE RECLAMAÇÃO
+							{!middleForm && 
+								'FORMULÁRIO DE RECLAMAÇÃO'
+							}
 						</p>
 					</div>
           	<div className='col s10 offset-s1'>		
@@ -105,8 +132,8 @@ class ClaimForm extends React.Component {
               <a href="/results" 
                 // onClick={()=>this.setState({result: true})}
                 className='btn btn-large red accent-2 white-text waves-effect waves-light'>
-                <i className="material-icons left">send</i> 
-                ENVIE AGORA!
+                <i className="material-icons left">{middleForm ? 'settings' : 'send'}</i> 
+                {middleForm ? 'Calcule agora!' : 'Envie agora!'}
               </a>
             </div>
           </div>                                  

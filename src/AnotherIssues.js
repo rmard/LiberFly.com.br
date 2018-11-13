@@ -11,7 +11,7 @@ class AnotherIssues extends React.Component {
   }
   
   componentDidMount = () => {
-    localStorage.setItem('issueType', 'Problemas com bagagem');
+    localStorage.setItem('issueType', 'Outros problemas');
   }
   
   updateState = (field, value) => {

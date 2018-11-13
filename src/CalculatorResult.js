@@ -1,6 +1,7 @@
 import React from 'react'
 import ButtonChat from './ButtonChat'
 import PlaneAnimation from './components/PlaneAnimation'
+import { userHasRight } from './Logic'
 
 class CalculatorResult extends React.Component {
 	state = {
@@ -8,7 +9,10 @@ class CalculatorResult extends React.Component {
 	}
 	componentDidMount = () => {
 		setTimeout(()=>{
-			this.setState({ready: true})
+			if(userHasRight())
+				this.setState({ready: true})
+			else
+				window.location.href = '/claim';
 		}, 6500)
 	}
 
@@ -78,7 +82,7 @@ class CalculatorResult extends React.Component {
 							Conheça seus direitos:
 							<video 
 								poster="" 
-								autoPlay="1" 
+								autoPlay="0" 
 								controls="1" 
 								loop="1" 
 								muted="1" 
