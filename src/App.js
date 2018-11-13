@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import DelayedFlight from './DelayedFlight';
 import CancelledFlight from './CancelledFlight';
 import BoardingDenied from './BoardingDenied';
+import LuggageIssues from './LuggageIssues';
 import MainOptions from './MainOptions';
 import CalculatorResult from './CalculatorResult';
 import ClaimForm from './ClaimForm';
@@ -64,6 +65,7 @@ class App extends Component {
         <Route path="/delayed-flight" component={DelayedFlight} />
         <Route path="/cancelled-flight" component={CancelledFlight} />
         <Route path="/boarding-denied" component={BoardingDenied} />
+        <Route path="/luggage-issues" component={LuggageIssues} />
         <Route path="/results" component={CalculatorResult} />
         <Route path="/claim" component={ClaimForm} />
         <Route path="/reclamacao" component={ClaimForm} />
