@@ -1,6 +1,7 @@
 import React from 'react'
 import LocationInput from './LocationInput'
 import CalculatorTitle from './CalculatorTitle'
+import IssueRefinerSelect from './components/IssueRefinerSelect'
 
 class DelayedFlight extends React.Component {
   state = {
@@ -8,19 +9,24 @@ class DelayedFlight extends React.Component {
     locationTo: '',
     delay: '',
     reason: '',
-    result: false
+    lostAppointment: ''
   }
-  updateLocationFrom = (value) => {
-    this.setState({locationFrom: value})
+  
+  componentDidMount = () => {
+    localStorage.setItem('issueType', 'Atraso de vôo');
   }
-  updateLocationTo = (value) => {
-    this.setState({locationTo: value})
-  }  
+  
+  updateState = (field, value) => {
+    let obj = {};
+    obj[field] = value;
+    this.setState(obj);
+    localStorage.setItem(field, value);
+  }
+ 
 	render = () => {
     const state = this.state;
-    // if(state.result)
-    //   return (<CalculatorResult />);
-    // else
+    let showExtraField = (this.state.delay!=='' && 
+              this.state.delay!=='Mais de 4 horas');
       return (
         <div>
           <CalculatorTitle />
@@ -36,44 +42,55 @@ class DelayedFlight extends React.Component {
                 <p className='form-helper'>Para onde você voou?</p>
                 <LocationInput 
                   value={state.locationFrom} 
-                  onChange={this.updateLocationFrom}
+                  onChange={(value)=>this.updateState('locationFrom', value)}
                   label='Partida'/>    
                 <LocationInput 
                   value={state.locationTo} 
-                  onChange={this.updateLocationTo}
+                  onChange={(value)=>this.updateState('locationTo', value)}
                   label='Destino'/>
               </div>
             </div>   
             <div className='row'>
               <div className='col s10 offset-s1'>
-                <p className='form-helper'>O atraso foi de quantas horas?</p>
-                <select
-                  defaultValue=''
-                  onChange={(event)=>this.setState({delay: event.target.value})}
-                >
-                  <option value='' disabled>Selecione</option>
-                  <option>Mais de 4 horas</option>
-                  <option>Entre 3 e 4 horas</option>
-                  <option>Entre 2 e 3 horas</option>
-                  <option>Entre 1 e 2 horas</option>
-                  <option>Menos de 1 hora</option>
-                </select>
+                <IssueRefinerSelect
+                  title='O atraso foi de quantas horas?'
+                  handleChange={(event)=>this.updateState('delay', event.target.value)}
+                  options={[
+                      'Mais de 4 horas',
+                      'Entre 3 e 4 horas',
+                      'Entre 2 e 3 horas',
+                      'Entre 1 e 2 horas',
+                      'Menos de 1 hora'
+                    ]}
+                />
               </div>
             </div>  
             <div className='row'>
               <div className='col s10 offset-s1'>
-                <p className='form-helper'>Qual foi o motivo informado?</p>
-                <select 
-                  defaultValue=''
-                  onChange={(event)=>this.setState({reason: event.target.value})}
-                  >
-                  <option value='' disabled>Selecione</option>
-                  <option>Problemas técnicos</option>
-                  <option>Problemas metereológicos</option>
-                  <option>Outros</option>
-                </select>
+                <IssueRefinerSelect
+                  title='Qual foi o motivo informado?'
+                  handleChange={(event)=>this.updateState('reason', event.target.value)}
+                  options={[
+                      'Problemas técnicos',
+                      'Problemas metereológicos',
+                      'Outros'
+                    ]}
+                />              
               </div>
-            </div>   
+            </div>  
+            <div className={`row ${showExtraField?'':'hide'}`}>
+              <div className='col s10 offset-s1'>
+                <IssueRefinerSelect
+                  title='Você perdeu algum compromisso por causa do atraso?'
+                  handleChange={(event)=>this.updateState('lostAppointment', event.target.value)}
+                  options={[
+                      'Sim, um compromisso de trabalho',
+                      'Sim, um compromisso pessoal',
+                      'Não'
+                    ]}
+                />               
+              </div>
+            </div>           
             <div className='row'>
               <div className='col s10 offset-s1'>
                 <p className='form-info'>
