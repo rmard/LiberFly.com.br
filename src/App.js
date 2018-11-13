@@ -40,6 +40,23 @@ class App extends Component {
             ]}
           />
         )}/>
+        <Route exact path="/news" render={()=>(
+          <BlogLinks 
+            title='Notícias'
+            links={[
+              {
+                img: 'https://liberfly.com.br/wp-content/uploads/2018/09/extraviaram-minha-mala-e-agora-1-e1537223779963.png',
+                title: 'Minha mala foi extraviada, e agora?',
+                url: 'https://liberfly.com.br/minha-mala-foi-extraviada-e-agora/'
+              },
+              {
+                img: 'https://liberfly.com.br/wp-content/uploads/2018/09/01.png',
+                title: 'Bagagem de mão: 5 dicas que ninguém te conta',
+                url: 'https://liberfly.com.br/bagagem-de-mao-5-dicas-que-ninguem-te-conta/'
+              },                            
+            ]}
+          />
+        )}/>        
         <Route exact path="/faq" component={Faq} />
         <Route exact path="/" component={MainOptions} />
         <Route path="/delayed-flight" component={DelayedFlight} />

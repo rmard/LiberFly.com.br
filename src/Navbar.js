@@ -34,7 +34,7 @@ class Navbar extends React.Component {
         <li><a href="/about">Quem somos</a></li>
         <li><a href="/your-rights">Conheça seus direitos</a></li>
         <li><a href="/blog">Blog de viagem</a></li>
-        <li><a href="#!" className='disabled'>Notícias</a></li>
+        <li><a href="/news">Notícias</a></li>
         <li><a href="/faq">Ajuda</a></li>
         <li><a href="/claim">Envie sua reclamação</a></li>
         <li><div className="divider"></div></li>
