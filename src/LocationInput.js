@@ -1,7 +1,7 @@
 import React from 'react'
 import {DebounceInput} from 'react-debounce-input';
 
-const endpoint = 'http://novosite.liberfly.com.br/googlemaps.php?input=';
+const endpoint = '//novosite.liberfly.com.br/googlemaps.php?input=';
 
 class LocationInput extends React.Component {
 	state = {
