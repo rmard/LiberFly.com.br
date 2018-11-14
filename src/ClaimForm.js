@@ -21,8 +21,8 @@ function FormSent() {
 					Seu caso será avaliado por um de nossos especialistas. Em breve entraremos em contato!
 				</p>
 			</div>
-    		<div class="parallax-container">
-      			<div class="parallax">
+    		<div className="parallax-container">
+      			<div className="parallax">
 					<img
 						alt='' 
 						src='
@@ -82,19 +82,14 @@ class ClaimForm extends React.Component {
 	}
 	formHandle = (event) => {
 		event.preventDefault();
-		let body = {
-			nome: this.state.name,
-			email: this.state.email,
-			telefone: this.state.tel,
-			relato:	`Forma de contato: ${this.state.contact} <br/>${this.state.other}<br/><br/>${getDetailsFormatted()}`		
-		};
-  		fetch('https://sistema.liberfly.com.br/casos/addreclamacaosite', {
+		let formData = new FormData();
+		formData.append('nome', this.state.name);
+		formData.append('email', this.state.email);
+		formData.append('telefone', this.state.telefone);
+		formData.append('relato', `Forma de contato: ${this.state.contact} <br/>${this.state.other}<br/><br/>${getDetailsFormatted()}`);
+  		fetch('https://sistema.liberfly.com.br/casos/addreclamacaosite.json', {
     		method: 'POST',
-    		headers: {
-      			'Content-Type': 'application/json'
-    		},
-    		body: JSON.stringify({ body })
-  		//}).then(res => res.json());		
+    		body: formData	
   		}).then(res => {
   			this.setState({formSent: true});
   			localStorage.clear();
