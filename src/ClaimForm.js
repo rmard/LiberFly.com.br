@@ -3,6 +3,7 @@ import ButtonChat from './ButtonChat'
 import ClaimTextInput from './ClaimTextInput'
 import { userHasRight, getDetailsFormatted } from './Logic'
 import FormSent from './components/FormSent';
+import PlaneAnimation from './components/PlaneAnimation';
 
 class ClaimForm extends React.Component {
 	state = {
@@ -12,7 +13,8 @@ class ClaimForm extends React.Component {
 		tel: '',
 		contact: '',
 		other: '',
-		formSent: false
+		formSent: false,
+		sending: false
 	}
 
 	extendForm = () => {
@@ -44,6 +46,7 @@ class ClaimForm extends React.Component {
 		formData.append('email', this.state.email);
 		formData.append('telefone', this.state.telefone);
 		formData.append('relato', `Forma de contato: ${this.state.contact} <br/>${this.state.other}<br/><br/>${getDetailsFormatted()}`);
+		this.setState({sending: true});
   		fetch('https://sistema.liberfly.com.br/casos/addreclamacaosite.json', {
     		method: 'POST',
     		body: formData	
@@ -84,75 +87,82 @@ class ClaimForm extends React.Component {
 						onSubmit={this.formHandle}
 						className='row blue-section'
 					>
-						<div className='col s12'>
-							<p className='font150'>
-								{!middleForm && 
-									'FORMULÁRIO DE RECLAMAÇÃO'
-								}
-							</p>
-						</div>
-			          	<div className='col s10 offset-s1'>		
-							<ClaimTextInput 
-								required
-								onChange={this.handleChange}
-								id='name'
-								label='Seu Nome'
-							/>       
-			          	</div>
-			          	<div className='col s10 offset-s1'>		
-							<ClaimTextInput 
-								required
-								onChange={this.handleChange}
-								id='email'
-								type='email'
-								label='Seu email'
-							/>          
-			          	</div>
-			          	<div className='col s10 offset-s1'>		
-							<ClaimTextInput 
-								onChange={this.handleChange}
-								id='tel'
-								type='tel'
-								label='Seu telefone'
-							/>                
-			          	</div>    
-			          	<div className='col s10 offset-s1 input-field'>
-				            <select
-				            	id='contact'
-				              	defaultValue=''
-				              	onChange={(event)=>this.setState({contact: event.target.value})}
-				            	>
-					              	<option disabled value='' className='disabled'>Forma de contato preferencial</option>
-					             	<option>Telefone</option>
-					              	<option>Email</option>
-				            </select>
-			          	</div>  
-			          	<div className={`form-extension ${this.state.formExtended ? 'extended' : ''}`}>
-				          	<div className='col s10 offset-s1'>		
-								<ClaimTextInput 
-									onChange={this.handleChange}
-									id='other'
-									label='Observações'
-								/>                
-				          	</div>           	
-				        </div>
-			          	<div className='col s10 offset-s1 center-align'>
-			          		<i className={`material-icons form-extension-handle ${this.state.formExtended ? 'clicked' : ''}`}
-			          			onClick={this.extendForm}>
-			          			chevron_right
-			          		</i>
-			          	</div>
-				        <div className='row'>
-				            <div className='col s10 offset-s1'>
-				              <br/>
-				              <button //href="/results" 
-				                // onClick={()=>this.setState({result: true})}
-				                className='btn btn-large red accent-2 white-text waves-effect waves-light'>
-				                <i className="material-icons left">{middleForm ? 'settings' : 'send'}</i> 
-				                {middleForm ? 'Calcule agora!' : 'Envie agora!'}
-				              </button>
-				            </div>
-				        </div>                               
+						{(this.state.sending) ? (
+							<PlaneAnimation />
+						) : (
+							<div>
+								<div className='col s12'>
+									<p className='font150'>
+										{!middleForm && 
+											'FORMULÁRIO DE RECLAMAÇÃO'
+										}
+									</p>
+								</div>
+					          	<div className='col s10 offset-s1'>		
+									<ClaimTextInput 
+										required
+										onChange={this.handleChange}
+										id='name'
+										label='Seu Nome'
+									/>       
+					          	</div>
+					          	<div className='col s10 offset-s1'>		
+									<ClaimTextInput 
+										required
+										onChange={this.handleChange}
+										id='email'
+										type='email'
+										label='Seu email'
+									/>          
+					          	</div>
+					          	<div className='col s10 offset-s1'>		
+									<ClaimTextInput 
+										onChange={this.handleChange}
+										id='tel'
+										type='tel'
+										label='Seu telefone'
+									/>                
+					          	</div>    
+					          	<div className='col s10 offset-s1 input-field'>
+						            <select
+						            	id='contact'
+						              	defaultValue=''
+						              	onChange={(event)=>this.setState({contact: event.target.value})}
+						            	>
+							              	<option disabled value='' className='disabled'>Forma de contato preferencial</option>
+							             	<option>Telefone</option>
+							              	<option>Email</option>
+						            </select>
+					          	</div>  
+					          	<div className={`form-extension ${this.state.formExtended ? 'extended' : ''}`}>
+						          	<div className='col s10 offset-s1'>		
+										<ClaimTextInput 
+											onChange={this.handleChange}
+											id='other'
+											label='Observações'
+										/>                
+						          	</div>           	
+						        </div>
+					          	<div className='col s10 offset-s1 center-align'>
+					          		<i className={`material-icons form-extension-handle ${this.state.formExtended ? 'clicked' : ''}`}
+					          			onClick={this.extendForm}>
+					          			chevron_right
+					          		</i>
+					          	</div>
+						        <div className='row'>
+						            <div className='col s10 offset-s1'>
+						              <br/>
+						              <button //href="/results" 
+						                // onClick={()=>this.setState({result: true})}
+						                className='btn btn-large red accent-2 white-text waves-effect waves-light'>
+						                <i className="material-icons left">{middleForm ? 'settings' : 'send'}</i> 
+						                {middleForm ? 'Calcule agora!' : 'Envie agora!'}
+						              </button>
+						            </div>
+						        </div>
+				        </div> 							
+						)}
+						                              
 	        		</form>
 			        <div className='row'>
 			        	<div className='col s10 offset-s1'>
