@@ -34,19 +34,19 @@ class App extends Component {
               title='Blog de viagem'
               links={[
                 {
-                  img: 'https://liberfly.com.br/wp-content/uploads/2018/10/09-2-1024x1024.jpg',
+                  img: 'https://desktop.liberfly.com.br/wp-content/uploads/2018/10/09-2-1024x1024.jpg',
                   title: 'Documentos necessários para viajar para a Europa',
-                  url: 'https://liberfly.com.br/documentoseuropa/'
+                  url: 'https://desktop.liberfly.com.br/documentoseuropa/'
                 },
                 {
-                  img: 'https://liberfly.com.br/wp-content/uploads/2018/10/06.png',
+                  img: 'https://desktop.liberfly.com.br/wp-content/uploads/2018/10/06.png',
                   title: 'Destinos baratos para sua primeira viagem internacional',
-                  url: 'https://liberfly.com.br/destinos-baratos-para-sua-primeira-viagem-internacional/'
+                  url: 'https://desktop.liberfly.com.br/destinos-baratos-para-sua-primeira-viagem-internacional/'
                 }, 
                 {
-                  img: 'https://liberfly.com.br/wp-content/uploads/2018/10/03-e1539200939118.png',
+                  img: 'https://desktop.liberfly.com.br/wp-content/uploads/2018/10/03-e1539200939118.png',
                   title: 'Meu voo foi cancelado, o que fazer?',
-                  url: 'https://liberfly.com.br/meu-voo-foi-cancelado/'
+                  url: 'https://desktop.liberfly.com.br/meu-voo-foi-cancelado/'
                 },                            
               ]}
             />
@@ -56,14 +56,14 @@ class App extends Component {
               title='Notícias'
               links={[
                 {
-                  img: 'https://liberfly.com.br/wp-content/uploads/2018/09/extraviaram-minha-mala-e-agora-1-e1537223779963.png',
+                  img: 'https://desktop.liberfly.com.br/wp-content/uploads/2018/09/extraviaram-minha-mala-e-agora-1-e1537223779963.png',
                   title: 'Minha mala foi extraviada, e agora?',
-                  url: 'https://liberfly.com.br/minha-mala-foi-extraviada-e-agora/'
+                  url: 'https://desktop.liberfly.com.br/minha-mala-foi-extraviada-e-agora/'
                 },
                 {
-                  img: 'https://liberfly.com.br/wp-content/uploads/2018/09/01.png',
+                  img: 'https://desktop.liberfly.com.br/wp-content/uploads/2018/09/01.png',
                   title: 'Bagagem de mão: 5 dicas que ninguém te conta',
-                  url: 'https://liberfly.com.br/bagagem-de-mao-5-dicas-que-ninguem-te-conta/'
+                  url: 'https://desktop.liberfly.com.br/bagagem-de-mao-5-dicas-que-ninguem-te-conta/'
                 },                            
               ]}
             />
