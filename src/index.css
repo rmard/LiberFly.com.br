@@ -18,9 +18,9 @@ code {
 /* nav */
 
 .nav-big-logo {
-	height: 64px;
+	height: 56px;
 	margin-left: -12px;
-	margin-top: -8px;
+	margin-top: -1px;
 }
 
 .nav-small-logo {
@@ -204,6 +204,17 @@ input.select-dropdown,
 .justify {
 	text-align: justify;
     text-justify: inter-word;
+}
+
+.wpp-icon {
+	background-image: url(/wpp.png);
+	background-size: contain;
+	position: relative;
+	top: 50%;
+	margin-left: 20px;
+	margin-top: -12px;
+	width: 24px;
+	height: 24px;
 }
 
 /* results page */
