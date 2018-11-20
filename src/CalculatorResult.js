@@ -25,7 +25,7 @@ class CalculatorResult extends React.Component {
 					<div className='row result-title'>
 						<div className='col s12'>
 							<h4>
-								Calculando sua <br/>indenização...
+								Calculando sua <br/>compensação...
 							</h4>
 						</div>
 					</div>	
@@ -50,12 +50,12 @@ class CalculatorResult extends React.Component {
 			return (
 				<div className='calculator-result'>
 					<div className='row result-title'>
-						<div className='col s4'>
+						<div className='col s3'>
 							<i className='material-icons title-icon'>check_circle</i>
 						</div>
-						<div className='col s8'>
+						<div className='col s9'>
 							<h4>
-								Você tem direito a indenização!
+								Você tem direito a compensação!
 							</h4>
 						</div>
 					</div>
@@ -71,12 +71,12 @@ class CalculatorResult extends React.Component {
 						<div className='col s4 result-icons'>
 							<i className='material-icons'>money</i>
 							<p>{compensationValue()}</p>
-							<p>é a indenização média por pessoa</p>
+							<p>é a compensação média por pessoa</p>
 						</div>
 						<div className='col s4 result-icons'>
 							<i className='material-icons'>check_box</i>
 							<p>98%</p>
-							<p>é a chance de receber indenização</p>
+							<p>é a chance de receber compensação</p>
 						</div>										
 					</div>
 					<div className='row'>
@@ -89,7 +89,7 @@ class CalculatorResult extends React.Component {
 								loop="1" 
 								muted="1" 
 								style={{maxWidth:"100%"}}>
-								<source type="video/mp4" src="https://liberfly.com.br/wp-content/uploads/2016/10/LIBERFLY-01FEVEREIRO2017-2.mp4"/>
+								<source type="video/mp4" src="https://desktop.liberfly.com.br/wp-content/uploads/2016/10/LIBERFLY-01FEVEREIRO2017-2.mp4"/>
 							</video>						
 						</div>
 					</div>	
