@@ -8,6 +8,7 @@ import LuggageIssues from './LuggageIssues';
 import AnotherIssues from './AnotherIssues';
 import MainOptions from './MainOptions';
 import CalculatorResult from './CalculatorResult';
+import ThirdPartySeller from './ThirdPartySeller';
 import ClaimForm from './ClaimForm';
 import About from './About';
 import YourRights from './YourRights';
@@ -76,6 +77,7 @@ class App extends Component {
           <Route path="/luggage-issues" component={LuggageIssues} />
           <Route path="/another-issues" component={AnotherIssues} />
           <Route path="/results" component={CalculatorResult} />
+          <Route path="/third-party-seller" component={ThirdPartySeller} />
           <Route path="/claim" component={ClaimForm} />
           <Route path="/reclamacao" component={ClaimForm} />
         </div>
