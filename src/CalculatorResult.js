@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonChat from './ButtonChat'
 import PlaneAnimation from './components/PlaneAnimation'
-import { userHasRight } from './Logic'
+import { userHasRight, compensationValue } from './Logic'
 
 class CalculatorResult extends React.Component {
 	state = {
@@ -70,7 +70,7 @@ class CalculatorResult extends React.Component {
 						</div>
 						<div className='col s4 result-icons'>
 							<i className='material-icons'>money</i>
-							<p>R$ 2.000</p>
+							<p>{compensationValue()}</p>
 							<p>é a indenização média por pessoa</p>
 						</div>
 						<div className='col s4 result-icons'>

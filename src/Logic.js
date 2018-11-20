@@ -12,9 +12,51 @@ export const userHasRight = () => {
 	}
 }
 
+export const compensationValue = () => {
+	if(!userHasRight)
+		return 0;
+	let baseValue;
+	let sum = 0;
+	switch(localStorage.issueType){
+		case 'Atraso de vôo':
+		case 'Cancelamento de vôo':
+			baseValue = 3500;
+			break;
+		case 'Não pude embarcar':
+			baseValue = [4000, 8000];
+			break;		
+		case 'Problemas com bagagem':
+			switch(localStorage.wasYourLuggageReturned) {
+				case 'Não, foi perdida definitivamente':
+					baseValue = [5000, 10000];
+					break;	
+				case 'Sim, mas com avaria(s)':
+					baseValue = [2000];
+					break;	
+				case 'Sim, mas com atraso':
+					baseValue = [2000, 10000];
+					break;	
+				default:
+					baseValue = [2000, 10000];
+					break;																				
+			}
+			break;
+		default:
+			return 0;
+	}	
+	if(localStorage.thirdPartySeller==='Sim') {
+		sum = 2000;
+	}
+	if(Array.isArray(baseValue))
+		return 'R$'+(baseValue[0]+sum).toLocaleString() + ' a R$' + (baseValue[1]+sum).toLocaleString();
+	else
+		return 'R$'+(baseValue+sum).toLocaleString();	
+}
+
 export const getDetailsFormatted = () => {
 	let result = localStorage.issueType;
 	result += '<br/>locationFrom: ' + localStorage.locationFrom + '<br/>locationTo: ' + localStorage.locationTo;
+	result += '<br/>thirdPartySeller: ' + localStorage.thirdPartySeller;
 	switch(localStorage.issueType){
 		case 'Atraso de vôo':
 			result += 
