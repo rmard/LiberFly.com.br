@@ -8,7 +8,7 @@ class CalculatorResult extends React.Component {
 		ready: false
 	}
 	componentDidMount = () => {
-		if(localStorage.getItem('thirdPartySeller')===null)
+		if(localStorage.getItem('justInputedThirdPartySeller')===null)
 			window.location.href = '/third-party-seller';
 		setTimeout(()=>{
 			if(userHasRight())

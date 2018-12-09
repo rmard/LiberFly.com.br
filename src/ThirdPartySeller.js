@@ -4,7 +4,7 @@ import IssueRefinerSelect from './components/IssueRefinerSelect'
 
 class ThirdPartySeller extends React.Component {
   state = {
-    thirdPartySeller: ''
+    justInputedThirdPartySeller: ''
   }
   
   componentDidMount = () => {
@@ -19,7 +19,7 @@ class ThirdPartySeller extends React.Component {
 
   submitForm = (event) => {
     event.preventDefault();
-    if(this.state.thirdPartySeller==='') {
+    if(this.state.justInputedThirdPartySeller==='') {
       window.M.toast({html: 'É necessário preencher o campo antes de prosseguir'});
     }
     else
@@ -42,7 +42,7 @@ class ThirdPartySeller extends React.Component {
                 <div className='col s10 offset-s1'>
                   <IssueRefinerSelect
                     title='A passagem foi comprada por alguma intermediadora?'
-                    handleChange={(event)=>this.updateState('thirdPartySeller', event.target.value)}
+                    handleChange={(event)=>this.updateState('justInputedThirdPartySeller', event.target.value)}
                     options={[
                         'Sim',
                         'Não'

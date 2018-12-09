@@ -39,6 +39,10 @@ class ClaimForm extends React.Component {
 				break;												
 		}
 	}
+	componentDidMount = () => {
+		localStorage.setItem('thirdPartySeller', localStorage.getItem('justInputedThirdPartySeller'));
+		localStorage.removeItem('justInputedThirdPartySeller');
+	}
 	formHandle = (event) => {
 		event.preventDefault();
 		let formData = new FormData();
